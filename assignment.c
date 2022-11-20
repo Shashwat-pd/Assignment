@@ -513,6 +513,42 @@ int main(){
     printf("Product = %d", product(a, b));
     return 0;
 }
+
+// 31.	Write a C program that finds nth Fibonacci number using recursive function
+int fib(int n){
+    if(n == 0){
+        return 0;
+    }else if(n == 1){
+        return 1;
+    }else{
+        return fib(n - 1) + fib(n - 2);
+    }
+}
+int main(){
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Fibonacci number = %d", fib(n));
+    return 0;
+}
+
+// 32.	Write a C program to display elements of array using recursive function.
+int display(int a[], int n){
+    if(n == 0){
+        return 0;
+    }else{
+        display(a, n - 1);
+        printf("%d ", a[n - 1]);
+    }
+}
+int main(){
+    int a[5] = {1, 2, 3, 4, 5};
+    display(a, 5);
+    return 0;
+}
+
+
+
 // 33.	Write a C program to compute sum of digits of a number using recursive function
 int sum(int n){
     if(n == 0){
